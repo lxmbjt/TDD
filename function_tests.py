@@ -1,5 +1,3 @@
-#这个是功能测
-
 from selenium import webdriver
 import unittest
 from selenium.webdriver.common.keys import Keys
