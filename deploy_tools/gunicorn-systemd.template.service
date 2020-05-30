@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn server for 112.124.17.126
+
+[Service]
+Restart=on-failure
+User=lxm
+WorkingDirectory=/home/lxm/sites/112.124.17.126/source
+ExecStart=/home/lxm/sites/112.124.17.126/virtualenv/bin/gunicorn --bind unix:/tmp/112.124.17.126.socket superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
